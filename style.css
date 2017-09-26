@@ -1,0 +1,114 @@
+body {
+    margin: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+ 
+    color: #1e70b7;
+    font-size: 3em;
+   
+}
+
+.row {
+    text-align: center;
+}
+
+
+p {
+    font-size: 120%;
+    line-height: 1.8em;
+    text-align: justify;
+}
+
+ul {
+    padding:0;
+}
+a {
+    text-decoration: none;
+    color: #12b908;
+}
+a:visited { 
+    color:#12b908;
+}
+li {
+  
+    list-style: none;
+    padding-top: 2.5em;
+    color: #12b908;
+    font-weight:bold;
+
+}
+
+header {
+    position: fixed;
+    width: 15%;
+    height: 100vh;
+    border-right: 2px solid #1e70b7;
+}
+
+
+
+
+main {
+   float: right;
+   width: 75%;
+}
+
+section {
+    height: 100%;
+}
+
+table{
+    border-collapse:collapse;
+ 
+    border-bottom: 1px solid #12b908;
+    margin: 0 auto;
+
+    }
+    
+    table td{
+      
+        border-bottom: 1px solid #12b908;
+        padding:1em;
+
+    }
+.headertr {
+    font-weight: bold;
+    border-bottom: 2px solid #12b908;
+}
+
+.col, .col2 {
+    padding: 10px;
+    display: inline-block;
+    display: -webkit-inline-box;
+}
+.col img {
+    width:275px;
+}
+
+.col2 img {
+    width:200px;
+}
+
+.texto {
+    width: 45%;
+    display:-webkit-inline-box; 
+    display:inline-block;
+    padding-right: 35px;
+}
+
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95% !important;
+    height: 95% !important;
+}
