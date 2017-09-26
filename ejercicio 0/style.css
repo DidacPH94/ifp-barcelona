@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    background-color: rgb(216, 218, 61);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:10px;
+}
+
+header {
+    width: 17%;
+    height: 100%;
+ 
+    float: left;
+   
+}
+
+h1,p, div {
+ color: rgb(128, 0, 128)
+}
+
+main {
+    float: right;
+    width: 83%;
+}
+
+p {
+    padding-top: 4px;
+    font-family: serif;
+}
+
+ul {
+    margin-top: 35px;
+}
+
+li {
+    width: 114px;
+    background-color: white;
+    list-style: none;
+    margin: 10px;
+    padding: 7px;
+    border-right: 17px solid black;
+    color: blue;
+    font-family: serif;
+}
