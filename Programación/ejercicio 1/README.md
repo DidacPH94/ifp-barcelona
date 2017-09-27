@@ -18,10 +18,12 @@ Exercici 8. Escriu un programa que mostri el resultat de l’equació de tercer 
  
 Exercici 9. Una companyia de refrescos comercialitza tres productes: de cola, de taronja i de llimona. Es desitja realitzar un programa que calculi les ventes de cada producte. Per a això es llegirà la quantitat venuda i el preu de cada producte. Per finalitzar es mostrarà un informe de les vendes semblant a aquest:
 
-| First Header  | Second Header | First Header  | Second Header |
+| Producte      | Vendes        | Preu          |  Total        |
 | ------------- | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Cola          | 100000        | 0,17          | 170000,00     |
+| Taronja       | 350000        | 0,20          | 70000,00      |
+| Llimona       | 530000        | 0,19          | 100700,00     |
+|                                        Total  | 340700,00     |
 
 Exercici 10. Programa que demani  un nombre sencer i mostri l’últim dígit.
  
