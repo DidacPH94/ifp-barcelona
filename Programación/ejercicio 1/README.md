@@ -23,7 +23,7 @@ Exercici 9. Una companyia de refrescos comercialitza tres productes: de cola, de
 | Cola          | 100000        | 0,17          | 170000,00     |
 | Taronja       | 350000        | 0,20          | 70000,00      |
 | Llimona       | 530000        | 0,19          | 100700,00     |
-|                                        Total  | 340700,00     |
+|               |               | Total         | 340700,00     |
 
 Exercici 10. Programa que demani  un nombre sencer i mostri l’últim dígit.
  
