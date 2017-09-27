@@ -1,4 +1,5 @@
 ACTIVITAT 1 - INTRODUCCIÓ AL PSEINT. SENTÈNCIES SIMPLES.
+
 Exercici 1. Escriu un programa que demani a l’usuari el nom i l’edat. Després ha de mostrar per pantalla: “Hola (nom), la teva edat és (edat)”;
  
 Exercici 2. Realitza un programa que demani a l’usuari dos nombres i després mostri per pantalla la suma dels dos.
@@ -17,15 +18,6 @@ Exercici 8. Escriu un programa que mostri el resultat de l’equació de tercer 
  
 Exercici 9. Una companyia de refrescos comercialitza tres productes: de cola, de taronja i de llimona. Es desitja realitzar un programa que calculi les ventes de cada producte. Per a això es llegirà la quantitat venuda i el preu de cada producte. Per finalitzar es mostrarà un informe de les vendes semblant a aquest:
  
-------------------------------------------------------------------------
-Producte    	   Vendes  	   Preu       	   Total
-------------------------------------------------------------------------
-Cola             100000  	   0,17        	  170000,00
-Taronja       	  350000  	   0,20        	  70000,00
-Llimona      	   530000  	   0,19        	  100700,00
-------------------------------------------------------------------------
-                             TOTAL   	      340700,00
-
 Exercici 10. Programa que demani  un nombre sencer i mostri l’últim dígit.
  
 Exercici 11. Programa que demani una quantitat –preu d’un producte – i calculi i visualitzi la quantitat d’IVA (aplicant un percentatge del 21 %) i la quantitat total a pagar (preu original + Iva).
