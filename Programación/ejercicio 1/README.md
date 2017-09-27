@@ -17,7 +17,12 @@ Exercici 7. Escriu un programa que demani a l’usuari la quantitat de segons i 
 Exercici 8. Escriu un programa que mostri el resultat de l’equació de tercer grau. Per a realitzar el programa s’hauran de llegir els coeficients (a, b, c i d) i el valor de x. El resultat es mostrarà per pantalla.
  
 Exercici 9. Una companyia de refrescos comercialitza tres productes: de cola, de taronja i de llimona. Es desitja realitzar un programa que calculi les ventes de cada producte. Per a això es llegirà la quantitat venuda i el preu de cada producte. Per finalitzar es mostrarà un informe de les vendes semblant a aquest:
- 
+
+| First Header  | Second Header | First Header  | Second Header |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
 Exercici 10. Programa que demani  un nombre sencer i mostri l’últim dígit.
  
 Exercici 11. Programa que demani una quantitat –preu d’un producte – i calculi i visualitzi la quantitat d’IVA (aplicant un percentatge del 21 %) i la quantitat total a pagar (preu original + Iva).
