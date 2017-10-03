@@ -1,14 +1,14 @@
-//AUTOR: AndrŽs Alagna
-//VERSIîN: 1
-//ESPECIFICACIîN: validador de formato DD-MM-AAAA
+//AUTOR: Andrés Alagna
+//VERSIÓN: 1
+//ESPECIFICACIÓN: validador de formato DD-MM-AAAA
 Proceso validarFecha
-	//DEFINICIîN DE VARIABLES
+	//DEFINICIÓN DE VARIABLES
 	Definir dia, mes, a Como Entero;
-	Escribir "Introduzca el d’a";
+	Escribir "Introduzca el día";
 	Leer dia;
 	Escribir "Introduzca el mes";
 	Leer mes;
-	Escribir "Introduzca el a–o";
+	Escribir "Introduzca el año";
 	Leer a;
 	//ALGORITMO
 	Si ((dia >= 01) Y (dia<=30) Y (mes >= 01) Y (mes <=12) Y (a>= 01) Y (a <=9999)) Entonces
@@ -16,7 +16,7 @@ Proceso validarFecha
 		Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 	SiNo
 		Escribir "La fecha no cumple con el formato DD-MM-AAAA.";
-		Escribir "Valores v‡lidos: d’as del 01 al 30, meses del 01 al 12, a–os del 0001 al 9999";
+		Escribir "Valores válidos: días del 01 al 30, meses del 01 al 12, años del 0001 al 9999";
 	FinSi
 FinProceso
 

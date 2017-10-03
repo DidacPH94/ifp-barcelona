@@ -1,14 +1,14 @@
-//AUTOR: Andrés Alagna
-//VERSIÓN: 1
-//ESPECIFICACIÓN: validador de formato DD-MM-AAAA
+//AUTOR: AndrÈs Alagna
+//VERSI”N: 1
+//ESPECIFICACI”N: validador de formato DD-MM-AAAA
 Proceso validarFecha
-	//DEFINICIÓN DE VARIABLES
+	//DEFINICI”N DE VARIABLES
 	Definir dia, mes, a Como Entero;
-	Escribir "Introduzca el día";
+	Escribir "Introduzca el dÌa";
 	Leer dia;
 	Escribir "Introduzca el mes";
 	Leer mes;
-	Escribir "Introduzca el año";
+	Escribir "Introduzca el aÒo";
 	Leer a;
 	
 	
@@ -23,16 +23,16 @@ Proceso validarFecha
 				Si ((mes=4) O (mes=6) O (mes=9) O (mes=11)) Y (dia<=30) Entonces // verificamos los meses restantes
 					Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 				SiNo
-				Escribir "El número de día introducido no corresponde con el mes";
-				Escribir "Meses de 28 días: Febrero tiene 28 salvo.";
-				Escribir "Meses de 30 días: Abril, junio, septiembre y noviembre.";
-			    Escribir "Meses de 31 días: Enero, marzo, mayo, julio, agosto, octubre y diciembre.";
+				Escribir "El n˙mero de dÌa introducido no corresponde con el mes";
+				Escribir "Meses de 28 dÌas: Febrero tiene 28 salvo.";
+				Escribir "Meses de 30 dÌas: Abril, junio, septiembre y noviembre.";
+			    Escribir "Meses de 31 dÌas: Enero, marzo, mayo, julio, agosto, octubre y diciembre.";
 				FinSi
 			FinSi
 		FinSi
 	SiNo
 		Escribir "La fecha no cumple con el formato DD-MM-AAAA.";
-		Escribir "Valores válidos: días del 01 al 31, meses del 01 al 12, años del 0001 al 9999";
+		Escribir "Valores v·lidos: dÌas del 01 al 31, meses del 01 al 12, años del 0001 al 9999";
 	FinSi
 
 FinProceso

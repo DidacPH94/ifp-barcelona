@@ -1,15 +1,14 @@
 Proceso productoNumeros
-	//AUTOR: AndrŽs Alagna
-	//VERSIîN: 1
-	//ESPECIFICACIîN: Producto numeros igual, menor o mayor a 0
+	//AUTOR: Andrés Alagna
+	//VERSIÓN: 1ó
+	//ESPECIFICACIN: Producto numeros igual, menor o mayor a 0
 	
-	//DEFINICIîN DE VARIABLES
+	//DEFINICIÓN DE VARIABLES
 	Definir num1, num2 Como Real; // indico nœmero reales en caso de que sea con decimales.
-	
     // Algoritmo
-	Escribir "Introduce el primer nœmero";
+	Escribir "Introduce el primer número";
 	Leer num1;
-	Escribir "Introduce el segundo nœmero";
+	Escribir "Introduce el segundo número";
 	Leer num2;
 	
 	Si ((num1 * num2 ) = 0) Entonces

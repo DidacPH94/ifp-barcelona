@@ -4,7 +4,7 @@
 Proceso validarFecha
 	//DEFINICIÓN DE VARIABLES
 	Definir dia, mes, a, horas,minutos, sgdos Como Entero;
-	Definir fecha Como Logico; // este valor nos servir‡ para determinar si pasamos al algoritmo que suma un segundo o no
+	Definir fecha,bisiesto Como Logico; // este valor nos servir‡ para determinar si pasamos al algoritmo que suma un segundo o no
 	Escribir "Introduzca el día";
 	Leer dia;
 	Escribir "Introduzca el mes";
@@ -29,10 +29,12 @@ Proceso validarFecha
 				Si ((a % 4 = 0) Y (a % 100 != 0)) O (a % 400 = 0) Y (dia <= 29) Entonces // calcular si es bisiesto
 					Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 					fecha <- Verdadero;
+					bisiesto <- verdadero;
 				SiNo
 					Si (dia <= 28) Entonces // no es bisiesto 
 						Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 						fecha <- Verdadero;
+						bisiesto <- falso;
 					SiNo
 						Escribir "El año introducido no es bisiesto";
 						fecha <- falso;
@@ -69,18 +71,39 @@ Proceso validarFecha
 				Si (minutos = 59 Y horas <23)  Entonces // cambia minuto, segundo y hora 
 					Escribir "La fecha en un segundo será ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas+1),":",ponerCeros(0),":",ponerCeros(0);
 				SiNo
-					Si (horas =23) Entonces // cambia minuto, segundo, hora y d“a
-						Si (dia<30)  Entonces
-							Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+					Si ((horas =23) Y (mes != 12)) Entonces // cambia minuto, segundo, hora, día o mes según sea 30,31,28,29
+						Si ((dia=30) Y ((mes=4) O (mes=6) O (mes=9) O (mes=11)))  Entonces
+							Escribir "La fecha en un segundo será ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
 						SiNo
-							Si (mes < 12) Entonces     // cambia TODO menos a–o
-								Escribir "La fecha es en un segundo será ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
-							SiNo  // cambia TODO
-									Escribir "La fecha es en un segundo será ",ponerCeros(1),"-",ponerCeros(1),"-",ponerCerosAla(a+1)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+							Si ((dia = 31)Y((mes=1) O (mes=3) O (mes=5) O (mes=7) O (mes=8) O (mes=10))) Entonces
+								Escribir "La fecha en un segundo será ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+							SiNo
+								Si (mes != 2) Entonces
+									Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+								SiNo
+									Si ((bisiesto = Verdadero) Y (dia = 28)) Entonces
+										Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+									SiNo
+										Si ((bisiesto = falso) y (dia = 28)) o ((bisiesto = Verdadero) Y (dia = 29)) Entonces
+											Escribir "La fecha en un segundo será ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+										SiNo
+											Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+										FinSi
+									FinSi
+								FinSi
 							FinSi
 						FinSi
 					SiNo
-						Escribir "Algo salió mal";
+						Si ((mes= 12) Y (dia != 31)) Entonces // dia normal de diciembre
+							Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+						SiNo
+							Si ((mes= 12) Y (dia = 31)) Entonces // ultimo dia de diciembre 
+								Escribir "La fecha es en un segundo será ",ponerCeros(1),"-",ponerCeros(1),"-",ponerCerosAla(a+1)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+							SiNo
+								Escribir "Algo salió mal, inténtalo nuevamente";
+							FinSi
+							
+						FinSi
 					FinSi
 				FinSi
 			FinSi

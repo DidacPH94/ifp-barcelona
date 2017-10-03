@@ -1,19 +1,19 @@
 Proceso simboloUnico
-	//AUTOR: AndrŽs Alagna
-	//VERSIîN: 1
-	//ESPECIFICACIîN: Producto numeros igual, menor o mayor a 0
+	//AUTOR: Andrés Alagna
+	//VERSIÓN: 1
+	//ESPECIFICACIÓN: Producto numeros igual, menor o mayor a 0
 	
-	//DEFINICIîN DE VARIABLES
+	//DEFINICIÓN DE VARIABLES
 	Definir simbolo Como cadena; // mostrar si es un s’mbolo de un digito 
 	
     // Algoritmo
-	Escribir "Introduce un s’mbolo";
+	Escribir "Introduce un símbolo";
 	Leer simbolo;
 	
 	Si (Longitud(simbolo) = 1) Entonces
-		Escribir "El s’mbolo es de un s—lo d’gito";
+		Escribir "El símbolo es de un sólo dígito";
 	SiNo
-		Escribir "El s’mbolo es de ",Longitud(simbolo), " d’gitos" ;
+		Escribir "El símbolo es de ",Longitud(simbolo), " dígitos" ;
 	FinSi
 FinProceso
 
