@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    html, body,frameset, frame {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+    #topDetop {
+        box-shadow: 0px 0px 10px 0px rgba(50,50,50,0.4);
+        margin-bottom: 100px;
+    } 
+    </style>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <frameset rows="100,*" border="0">  
+        <frame id="topDetop" name="arriba" src="top.html" noresize="noresize" >
+        <frameset cols="120,*" border="0">
+            <frame id="sidebar" name="izq" src="izquierda.html"noresize="noresize" >    
+            <frame name="centro" src="centro.html"noresize="noresize">    
+        </frameset>
+    </frameset>
+    <script>
+            $(function() {    
+        
+                if ( $(window).width() <700) {      
+                    var widthp = $('p').width();
+        
+           $('iframe').width(widthp);
+        } 
+        
+        $(window).resize(function(){
+            if ( $(window).width() < 700) {
+            $('iframe').width(widthp);
+        
+            widthp = $('p').width();
+            }
+        });
+        
+        
+        });
+           
+        
+        
+        
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

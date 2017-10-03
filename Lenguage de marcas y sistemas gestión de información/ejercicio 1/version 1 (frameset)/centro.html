@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./css/style.css">
+
+<body id="center">
+    <h1>Bienvenido a IFP Barcelona</h1>
+    <div class="wrapper izquierda">
+        <p>iFP (Innovación en Formación Profesional) es un centro oficial de Formación Profesional de primer nivel, innovador, funcional y moderno.           
+    </p>
+        <p>
+         Ofrecemos una formación de calidad combinando una metodología innovadora, profesores expertos y la colaboración de las mejores empresas que enriquecen los contenidos y facilitan prácticas.
+        </p>        
+              
+    </div>
+    <div>
+            <div class="derecha wrapper">
+                    <iframe width="415" height="315" src="https://www.youtube.com/embed/Oub8PRH4QQQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function() {    
+
+        if ( $(window).width() <700) {      
+            var widthp = $('p').width();
+
+   $('iframe').width(widthp);
+} 
+
+$(window).resize(function(){
+    if ( $(window).width() < 700) {
+    $('iframe').width(widthp);
+
+    widthp = $('p').width();
+    }
+});
+
+
+});
+   
+
+
+
+</script>
+
+
+</body>
