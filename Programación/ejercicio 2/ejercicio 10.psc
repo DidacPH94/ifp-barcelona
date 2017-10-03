@@ -1,15 +1,15 @@
-//AUTOR: Andrés Alagna
-//VERSIÓN: 1
-//ESPECIFICACIÓN: la hora en un segundo
+//AUTOR: AndrÈs Alagna
+//VERSI”N: 1
+//ESPECIFICACI”N: la hora en un segundo
 Proceso validarFecha
-	//DEFINICIÓN DE VARIABLES
+	//DEFINICI”N DE VARIABLES
 	Definir dia, mes, a, horas,minutos, sgdos Como Entero;
 	Definir fecha Como Logico; // este valor nos servirá para determinar si pasamos al algoritmo que suma un segundo o no
-	Escribir "Introduzca el día";
+	Escribir "Introduzca el dÌa";
 	Leer dia;
 	Escribir "Introduzca el mes";
 	Leer mes;
-	Escribir "Introduzca el año";
+	Escribir "Introduzca el aÒo";
 	Leer a;
 	Escribir "Introduzca las horas";
 	Leer horas;
@@ -34,7 +34,7 @@ Proceso validarFecha
 						Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 						fecha <- Verdadero;
 					SiNo
-						Escribir "El año introducido no es bisiesto";
+						Escribir "El aÒo introducido no es bisiesto";
 						fecha <- falso;
 					FinSi
 				FinSi
@@ -43,17 +43,17 @@ Proceso validarFecha
 					Escribir "La fecha introducida ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a), " cumple con el formato DD-MM-AAAA";
 					fecha <- Verdadero;
 				SiNo
-				Escribir "El número de día introducido no corresponde con el mes";
-				Escribir "Meses de 28 días: Febrero tiene 28 salvo.";
-				Escribir "Meses de 30 días: Abril, junio, septiembre y noviembre.";
-			    Escribir "Meses de 31 días: Enero, marzo, mayo, julio, agosto, octubre y diciembre.";
+				Escribir "El n˙mero de dÌa introducido no corresponde con el mes";
+				Escribir "Meses de 28 dÌas: Febrero tiene 28 salvo.";
+				Escribir "Meses de 30 dÌas: Abril, junio, septiembre y noviembre.";
+			    Escribir "Meses de 31 dÌas: Enero, marzo, mayo, julio, agosto, octubre y diciembre.";
 				fecha <- falso;
 				FinSi
 			FinSi
 		FinSi
 	SiNo
 		Escribir "La fecha no cumple con el formato DD-MM-AAAA.";
-		Escribir "Valores válidos: días del 01 al 31, meses del 01 al 12, años del 0001 al 9999";
+		Escribir "Valores v·lidos: dÌas del 01 al 31, meses del 01 al 12, aÒos del 0001 al 9999";
 		fecha <- falso;
 	FinSi
 	
@@ -61,26 +61,26 @@ Proceso validarFecha
 	Si (verificadorDeValores(horas,minutos,sgdos) Y fecha) Entonces // verificamos el formato y fecha
 		Escribir "La hora introducida ", ponerCeros(horas),":",ponerCeros(minutos),":",ponerCeros(sgdos), " cumple con el formato HH-MM-SS";
 		Si (sgdos <= 58) Entonces // tan solo sumamos un segundo y todo sigue igual
-			Escribir "La fecha en un segundo será ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas),":",ponerCeros(minutos),":",ponerCeros(sgdos+1);
+			Escribir "La fecha en un segundo ser· ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas),":",ponerCeros(minutos),":",ponerCeros(sgdos+1);
 		SiNo
 			Si (minutos <= 58) Entonces // cambia el minuto + 1, pero no cambia hora
-				Escribir "La fecha en un segundo será ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas),":",ponerCeros(minutos+1),":",ponerCeros(0);
+				Escribir "La fecha en un segundo ser· ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas),":",ponerCeros(minutos+1),":",ponerCeros(0);
 			SiNo
 				Si (minutos = 59 Y horas <23)  Entonces // cambia minuto, segundo y hora 
-					Escribir "La fecha en un segundo será ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas+1),":",ponerCeros(0),":",ponerCeros(0);
+					Escribir "La fecha en un segundo ser· ", ponerCeros(dia),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(horas+1),":",ponerCeros(0),":",ponerCeros(0);
 				SiNo
 					Si (horas =23) Entonces // cambia minuto, segundo, hora y dìa
 						Si (dia<30)  Entonces
-							Escribir "La fecha en un segundo será ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+							Escribir "La fecha en un segundo ser· ",ponerCeros(dia+1),"-",ponerCeros(mes),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
 						SiNo
 							Si (mes < 12) Entonces     // cambia TODO menos año
-								Escribir "La fecha es en un segundo será ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+								Escribir "La fecha es en un segundo ser· ",ponerCeros(1),"-",ponerCeros(mes+1),"-",ponerCerosAla(a)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
 							SiNo  // cambia TODO
-									Escribir "La fecha es en un segundo será ",ponerCeros(1),"-",ponerCeros(1),"-",ponerCerosAla(a+1)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
+									Escribir "La fecha es en un segundo ser· ",ponerCeros(1),"-",ponerCeros(1),"-",ponerCerosAla(a+1)," ",ponerCeros(0),":",ponerCeros(0),":",ponerCeros(0);
 							FinSi
 						FinSi
 					SiNo
-						Escribir "Algo salió mal";
+						Escribir "Algo saliÛ mal";
 					FinSi
 				FinSi
 			FinSi
@@ -98,7 +98,7 @@ SubProceso vlor <-verificadorDeValores(horas,minutos,sgdos)
 	Si (((horas >= 1) Y (horas <= 23)) Y ((minutos >= 0) Y (minutos <= 59)) Y ((sgdos >= 0) Y (sgdos <= 59))) Entonces
 		vlor<-Verdadero;
 	SiNo
-		Escribir "El formato introducido para la hora no es válido";
+		Escribir "El formato introducido para la hora no es v·lido";
 		vlor <- falso;
 	FinSi
 FinSubProceso
